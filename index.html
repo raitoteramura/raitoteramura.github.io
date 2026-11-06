@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raito Teramura — CG Generalist</title>
+  <meta name="description" content="Raito Teramura — CG Generalist. Animation, Modeling, Editing, Direction.") />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 粒状ノイズオーバーレイ（高級感の演出） -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ナビゲーション -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top">
+      <span class="nav__logo-name">RAITO TERAMURA</span>
+      <span class="nav__logo-red">.</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#showreel">Showreel</a>
+      <a href="#works">Works</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- 01 / HERO -->
+    <section class="hero">
+      <p class="hero__label reveal">CG Generalist — Nagoya, Japan</p>
+      <h1 class="hero__title">
+        <span class="reveal">FROM CONCEPT</span><br />
+        <span class="reveal">TO <em>FINALE</em>.</span>
+      </h1>
+      <p class="hero__desc reveal">
+        Modeling. Animation. VFX. Lighting.<br />
+        One full pipeline, one pair of hands.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#showreel" class="btn btn--solid">▶ Watch Showreel</a>
+        <a href="#works" class="btn btn--ghost">Selected Works</a>
+      </div>
+      <a class="hero__scroll" href="#showreel" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- 02 / SHOWREEL -->
+    <section class="section" id="showreel">
+      <header class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Showreel</h2>
+      </header>
+      <div class="reel reveal" id="reelWrap" data-youtube="-8s_QW_NwJg">
+        <!-- data-youtube: REEL2025（2026年1月公開） -->
+        <button class="reel__play" id="reelPlay" aria-label="Play showreel">
+          <span class="reel__icon"></span>
+        </button>
+        <div class="reel__meta">RAITO TERAMURA — REEL 2025</div>
+        <a class="reel__yt" id="reelYt" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+        <div class="reel__frame" hidden></div>
+      </div>
+    </section>
+
+    <!-- 03 / SELECTED WORKS -->
+    <section class="section" id="works">
+      <header class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Selected Works</h2>
+        <div class="filter" id="filter" role="tablist"></div>
+      </header>
+      <div class="works__grid" id="worksGrid"></div>
+      <p class="works__note reveal">Each piece opens its own video — press play to view.</p>
+    </section>
+
+    <!-- 04 / PIPELINE -->
+    <section class="section" id="pipeline">
+      <header class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Pipeline</h2>
+      </header>
+      <div class="pipeline__grid" id="pipelineGrid"></div>
+    </section>
+
+    <!-- 05 / ABOUT -->
+    <section class="section" id="about">
+      <header class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title">About</h2>
+      </header>
+      <div class="about">
+        <div class="about__photo reveal" aria-hidden="true">
+          <span>RT</span>
+        </div>
+        <div class="about__body">
+          <p class="about__bio reveal" id="aboutBio"></p>
+          <h3 class="sub-heading reveal">Tools</h3>
+          <ul class="chips" id="toolChips"></ul>
+          <h3 class="sub-heading reveal">Career</h3>
+          <ul class="timeline" id="career"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 / CONTACT -->
+    <section class="section contact" id="contact">
+      <header class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Contact</h2>
+      </header>
+      <a class="contact__mail reveal" id="contactMail" href="mailto:"></a>
+      <div class="contact__socials reveal" id="socials"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span id="footerName"></span>
+    <span class="footer__dot">·</span>
+    <span>© <span id="year"></span> All rights reserved.</span>
+  </footer>
+
+  <!-- 動画モーダル -->
+  <div class="modal" id="videoModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <div class="modal__frame" id="modalFrame"></div>
+      <p class="modal__meta" id="modalMeta"></p>
+      <a class="modal__yt" id="modalYt" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
